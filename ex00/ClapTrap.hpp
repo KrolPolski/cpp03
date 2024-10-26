@@ -6,11 +6,13 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:50:25 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/25 17:03:01 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:27:29 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include <string>
+#include <iostream>
 class ClapTrap
 {
 	private:
@@ -19,7 +21,10 @@ class ClapTrap
 		int			_EP;
 		int			_attackDamage;
 	public:
+		ClapTrap();
 		ClapTrap(std::string _name);
+		ClapTrap(const ClapTrap& other);
+		ClapTrap& operator=(const ClapTrap& other);
 		~ClapTrap();
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
