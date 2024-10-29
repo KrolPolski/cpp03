@@ -6,13 +6,13 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:40:55 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/29 14:03:45 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 17:31:17 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap() : ClapTrap("TheFragWithNoName")
 {
 	this->_name = "TheFragWithNoName"; 
     _HP = 100;
@@ -21,7 +21,7 @@ FragTrap::FragTrap()
 	std::cout << "FragTrap default constructor called on " << this->_name << std::endl;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	this->_name = name; 
     _HP = 100;

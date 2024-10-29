@@ -6,13 +6,13 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:40:55 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/29 16:45:19 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 17:34:30 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap() : ClapTrap("TheFragWithNoName")
 {
 	this->_name = "TheFragWithNoName"; 
     _HP = 100;

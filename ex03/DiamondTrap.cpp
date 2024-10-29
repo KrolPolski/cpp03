@@ -6,13 +6,13 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 12:41:52 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/29 16:49:11 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 17:47:53 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap() : ClapTrap("TheDiamondWithNoName_clap_name"), ScavTrap(), FragTrap() 
+DiamondTrap::DiamondTrap() :  ClapTrap("TheDiamondWithNoName_clap_name"), ScavTrap("TheDiamondWithNoName"), FragTrap("TheDiamondWithNoName") 
 {
 	this->_name = "TheDiamondWithNoName"; 
     _EP = 50;
@@ -27,15 +27,30 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Scav
 	std::cout << "DiamondTrap constructor called on " << this->_name << std::endl;
 }
 
-/*DiamondTrap::DiamondTrap(const DiamondTrap& other)
+DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other._name + "_clap_name"), ScavTrap(other._name), FragTrap(other._name)
 {
-	
+	if (this != &other)
+    {
+        _name = other._name;
+        _HP = other._HP;
+        _EP = other._EP;
+        _attackDamage = other._attackDamage;
+    }
+    std::cout << "Copy constructor called on " << this->_name << std::endl;
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)
 {
-	
-}*/
+	if (this != &other)
+    {
+        _name = other._name;
+        _HP = other._HP;
+        _EP = other._EP;
+        _attackDamage = other._attackDamage;
+    }
+    std::cout << "Copy assignment constructor called on " << this->_name << std::endl;
+    return (*this);
+}
 
 void DiamondTrap::attack(const std::string& target)
 {

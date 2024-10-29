@@ -6,13 +6,14 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:50:25 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/26 14:27:29 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 17:18:08 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <string>
 #include <iostream>
+
 class ClapTrap
 {
 	private:

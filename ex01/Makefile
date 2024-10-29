@@ -6,12 +6,12 @@
 #    By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/26 13:50:13 by rboudwin          #+#    #+#              #
-#    Updated: 2024/10/28 10:42:21 by rboudwin         ###   ########.fr        #
+#    Updated: 2024/10/29 17:21:47 by rboudwin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:= ScavTrap
-CFLAGS  := -Wextra -Wall -Werror
+CFLAGS  := -Wextra -Wall -Werror -std=c++11
 SRCS	:= main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJS	:= ${SRCS:.cpp=.o}
 

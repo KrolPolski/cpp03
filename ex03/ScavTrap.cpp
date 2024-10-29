@@ -6,13 +6,13 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:20:15 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/29 14:54:51 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 17:34:18 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap("TheRobotWithNoName")
 {
 	this->_name = "TheRobotWithNoName"; 
     _HP = 100;

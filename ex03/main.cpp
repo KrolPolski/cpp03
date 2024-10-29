@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:21:16 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/29 16:47:56 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 17:49:43 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,25 @@
 
 int main(void)
 {
-    DiamondTrap anon;
+    {	
+		DiamondTrap anon;
+		DiamondTrap copy(anon);
 	
-	{
 		anon.whoAmI();
 		anon.printStats();
 		anon.attack("Ted");
+		copy.HighFivesGuys();
 		std::cout << std::endl;
 	}
 	{	
-		DiamondTrap Pretty("Pretty");	
+		DiamondTrap Pretty("Pretty");
+		DiamondTrap Hope(Pretty);
+		DiamondTrap Lovely;
+		Hope.whoAmI();
 		Pretty.whoAmI();
+		Lovely.whoAmI();
+		Lovely = Hope;
+		Lovely.whoAmI();
 		Pretty.printStats();
 		Pretty.attack("Ted");
 		Pretty.HighFivesGuys();

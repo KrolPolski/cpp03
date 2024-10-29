@@ -6,12 +6,12 @@
 #    By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/26 13:50:13 by rboudwin          #+#    #+#              #
-#    Updated: 2024/10/28 11:50:01 by rboudwin         ###   ########.fr        #
+#    Updated: 2024/10/29 17:21:58 by rboudwin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:= FragTrap
-CFLAGS  := -Wextra -Wall -Werror
+CFLAGS  := -Wextra -Wall -Werror -std=c++11
 SRCS	:= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS	:= ${SRCS:.cpp=.o}
 

@@ -6,12 +6,12 @@
 #    By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/26 13:50:13 by rboudwin          #+#    #+#              #
-#    Updated: 2024/10/26 14:26:05 by rboudwin         ###   ########.fr        #
+#    Updated: 2024/10/29 17:20:56 by rboudwin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:= ClapTrap
-CFLAGS  := -Wextra -Wall -Werror
+CFLAGS  := -Wextra -Wall -Werror -std=c++11
 SRCS	:= main.cpp ClapTrap.cpp
 OBJS	:= ${SRCS:.cpp=.o}
 

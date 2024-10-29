@@ -6,13 +6,13 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:20:15 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/29 14:01:01 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 17:29:33 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap("TheRobotWithNoName")
 {
 	this->_name = "TheRobotWithNoName"; 
     _HP = 100;
@@ -21,7 +21,7 @@ ScavTrap::ScavTrap()
 	std::cout << "ScavTrap default constructor called on " << this->_name << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	this->_name = name; 
     _HP = 100;
