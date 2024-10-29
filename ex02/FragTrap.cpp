@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:40:55 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/29 12:35:18 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:03:45 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,25 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
     return (*this);
 }
 
+void FragTrap::attack(const std::string& target)
+{
+	if (_HP > 0 && _EP > 0)
+    {
+        _EP--;
+        std::cout << "FragTrap " << _name << " attacks " << target << " causing " 
+            << _attackDamage << " points of damage!" << std::endl;
+    }
+    else if (_HP <= 0)
+    {
+        std::cout << "FragTrap " << _name << " failed to attack because it has " << _HP 
+            << " hit points." << std::endl;
+    }
+    else if (_EP <= 0)
+    {
+        std::cout << "FragTrap " << _name << " failed to attack because it has " << _HP 
+            << " energy points." << std::endl;
+    }
+}
 FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap destructor called on " << this->_name << std::endl;

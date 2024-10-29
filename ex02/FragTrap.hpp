@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:39:46 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/29 12:34:36 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:04:40 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class FragTrap : public ClapTrap
 		FragTrap(std::string name);
 		FragTrap(const FragTrap& other);
 		FragTrap& operator=(const FragTrap& other);
+		void virtual attack(const std::string& target);
 		~FragTrap();
 		void HighFivesGuys(void);
 };
