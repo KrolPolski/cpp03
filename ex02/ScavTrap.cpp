@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:20:15 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/28 10:41:11 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 12:33:51 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,31 @@ ScavTrap::ScavTrap(std::string name)
     _EP = 50;
     _attackDamage = 20;
 	std::cout << "ScavTrap constructor called on " << this->_name << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& other)
+{
+    if (this != &other)
+    {
+        _name = other._name;
+        _HP = other._HP;
+        _EP = other._EP;
+        _attackDamage = other._attackDamage;
+    }
+    std::cout << "Copy constructor called on " << this->_name << std::endl;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other)
+{
+    if (this != &other)
+    {
+        _name = other._name;
+        _HP = other._HP;
+        _EP = other._EP;
+        _attackDamage = other._attackDamage;
+    }
+    std::cout << "Copy assignment constructor called on " << this->_name << std::endl;
+    return (*this);
 }
 
 ScavTrap::~ScavTrap()

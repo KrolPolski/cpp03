@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:40:55 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/28 11:50:36 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/29 12:35:18 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,31 @@ FragTrap::FragTrap(std::string name)
     _EP = 100;
     _attackDamage = 30;
 	std::cout << "FragTrap constructor called on " << this->_name << std::endl;
+}
+
+FragTrap::FragTrap(const FragTrap& other)
+{
+    if (this != &other)
+    {
+        _name = other._name;
+        _HP = other._HP;
+        _EP = other._EP;
+        _attackDamage = other._attackDamage;
+    }
+    std::cout << "Copy constructor called on " << this->_name << std::endl;
+}
+
+FragTrap& FragTrap::operator=(const FragTrap& other)
+{
+    if (this != &other)
+    {
+        _name = other._name;
+        _HP = other._HP;
+        _EP = other._EP;
+        _attackDamage = other._attackDamage;
+    }
+    std::cout << "Copy assignment constructor called on " << this->_name << std::endl;
+    return (*this);
 }
 
 FragTrap::~FragTrap()
